@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     myInfo.setGender(user.getKakaoAccount().getGender().name());
                     myInfo.setAge(user.getKakaoAccount().getAgeRange().name());
                     startActivity(intent);
+                    overridePendingTransition(0, 0);
                     binding.login.setVisibility(View.GONE);
                     binding.logout.setVisibility(View.VISIBLE);
                 } else {
