@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Step1Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="상단바가 들어갈 예정입니다."/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:text="어떤 응급상황으로 신고하시나요?"
+        android:textSize="25dp"/>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:useDefaultMargins="true"
+        android:padding="30dp"
+        android:columnCount="2"
+        android:orientation="horizontal">
+        <Button android:text="심정지"/>
+        <Button android:text="심장질환"/>
+
+        <Button android:text="뇌질환"/>
+        <Button android:text="중증 외상"/>
+
+        <Button android:text="화재"/>
+        <Button android:text="수난사고"/>
+
+        <Button android:text="교통사고"/>
+        <Button android:text="기타"/>
+    </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="환자정보 미리 작성하기"
+        />
+</LinearLayout>
