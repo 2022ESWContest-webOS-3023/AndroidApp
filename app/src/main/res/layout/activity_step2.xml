@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Step2Activity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,21 +32,15 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:orientation="horizontal">
-                <ImageButton
-                    android:gravity="center_vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/white"
-                    android:layout_marginRight="0dp"
-                    android:src="@drawable/marker_icon"/>
                 <TextView
                     android:textAlignment="center"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:layout_marginLeft="0dp"
                     android:gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="신촌로1"/>
+                    android:text="신고하기" />
             </LinearLayout>
             <ImageButton
                 android:stateListAnimator="@null"
@@ -57,5 +52,122 @@
                 android:src="@drawable/alarm_icon"/>
         </LinearLayout>
     </LinearLayout>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="현재위치"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_rounded"
+                android:layout_marginBottom="10dp"
+                android:text="대구광역시 북구 대학로80 누리관"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:text="지도로 다시 선택 >"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사진선택"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="최대 10장"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_rounded"/>
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_rounded"/>
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_rounded"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="신고내용"/>
+            <EditText
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="left"
+                android:hint="신고내용을 입력해주세요."
+                android:textSize="15dp"
+                android:maxLength="300"
+                android:background="@drawable/bg_rounded"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0/300"
+                android:gravity="right"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="환자 정보 입력"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"/>
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton android:id="@+id/inWritable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/input_box_color"
+                    android:layout_marginBottom="10dp"
+                    android:text="환자정보를 알지 못합니다."/>
+                <RadioButton android:id="@+id/writable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/input_box_color"
+                    android:text="환자정보를 알고 있으며 입력가능합니다."/>
+            </RadioGroup>
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="다음"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

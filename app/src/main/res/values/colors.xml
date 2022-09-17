@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="main_bg">#FF354350</color>
     <color name="btn_color">#FFE9EAEC</color>
+    <color name="input_box_color">#FFF4F5F5</color>
 </resources>
